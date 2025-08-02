@@ -15,7 +15,7 @@ import { SeedService } from "./seeds/seed.service";
         host: configService.get("DB_HOST", "localhost"),
         port: configService.get("DB_PORT", 5432),
         username: configService.get("DB_USERNAME", "postgres"),
-        password: configService.get("DB_PASSWORD", "password"),
+        password: configService.get("DB_PASSWORD", "Pass@123"),
         database: configService.get("DB_NAME", "doctor_appointment"),
         entities: [Doctor, Appointment, TimeSlot],
         synchronize: configService.get("NODE_ENV") !== "production",
