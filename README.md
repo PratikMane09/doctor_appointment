@@ -1,6 +1,6 @@
 # Doctor Appointment Booking System
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Framework**: NestJS (TypeScript)
 - **Database**: PostgreSQL
@@ -8,7 +8,7 @@
 - **Validation**: Class-validator & Class-transformer
 - **Documentation**: Swagger/OpenAPI
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -60,7 +60,7 @@ DB_PASSWORD=Pass@123
 DB_NAME=doctor_appointment
 ```
 
-> 🔒 Make sure to replace `Pass@123` with your actual database password.
+> Make sure to replace `Pass@123` with your actual database password.
 
 ### 4. Run Application
 
