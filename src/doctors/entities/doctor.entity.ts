@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Appointment } from "../../appointments/entities/appointment.entity";
-import { TimeSlot } from "../../time-slots/entities/time-slot.entity";
 
 @Entity("doctors")
 export class Doctor {
@@ -34,9 +33,6 @@ export class Doctor {
 
   @OneToMany(() => Appointment, (appointment) => appointment.doctor)
   appointments: Appointment[];
-
-  @OneToMany(() => TimeSlot, (timeSlot) => timeSlot.doctor)
-  timeSlots: TimeSlot[];
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
   createdAt: Date;

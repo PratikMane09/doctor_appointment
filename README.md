@@ -1,6 +1,6 @@
 # Doctor Appointment Booking System
 
-##  Tech Stack
+## Tech Stack
 
 - **Framework**: NestJS (TypeScript)
 - **Database**: PostgreSQL
@@ -75,5 +75,5 @@ npm run start:prod
 
 ### 5. Access API
 
-- **API Base URL**: [http://localhost:3000](http://localhost:3000)
-- **Swagger Docs**: [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
+- **API Base URL**: [http://localhost:3000](http://localhost:5000)
+- **Swagger Docs**: [http://localhost:3000/api/docs](http://localhost:5000/api/docs)

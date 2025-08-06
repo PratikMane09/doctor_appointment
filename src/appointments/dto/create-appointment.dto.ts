@@ -22,7 +22,7 @@ export class CreateAppointmentDto {
   @IsEmail()
   patientEmail: string;
 
-  @ApiProperty({ example: "2024-08-15" })
+  @ApiProperty({ example: "2025-08-15" })
   @IsDateString()
   appointmentDate: string;
 

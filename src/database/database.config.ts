@@ -4,7 +4,6 @@ import { config } from "dotenv";
 
 import { Doctor } from "../doctors/entities/doctor.entity";
 import { Appointment } from "../appointments/entities/appointment.entity";
-import { TimeSlot } from "../time-slots/entities/time-slot.entity";
 
 config();
 
@@ -17,7 +16,7 @@ export default new DataSource({
   username: configService.get("DB_USERNAME", "postgres"),
   password: configService.get("DB_PASSWORD", "Pass@123"),
   database: configService.get("DB_NAME", "doctor_appointment"),
-  entities: [Doctor, Appointment, TimeSlot],
+  entities: [Doctor, Appointment],
   migrations: ["src/database/migrations/*{.ts,.js}"],
   migrationsTableName: "migrations_history",
   synchronize: false,

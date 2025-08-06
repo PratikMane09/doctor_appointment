@@ -16,11 +16,9 @@ exports.TimeSlotsService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const time_slot_entity_1 = require("./entities/time-slot.entity");
 const appointment_entity_1 = require("../appointments/entities/appointment.entity");
 let TimeSlotsService = class TimeSlotsService {
-    constructor(timeSlotsRepository, appointmentsRepository) {
-        this.timeSlotsRepository = timeSlotsRepository;
+    constructor(appointmentsRepository) {
         this.appointmentsRepository = appointmentsRepository;
     }
     async getAvailableSlots(doctorId, date) {
@@ -78,9 +76,7 @@ let TimeSlotsService = class TimeSlotsService {
 exports.TimeSlotsService = TimeSlotsService;
 exports.TimeSlotsService = TimeSlotsService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, typeorm_1.InjectRepository)(time_slot_entity_1.TimeSlot)),
-    __param(1, (0, typeorm_1.InjectRepository)(appointment_entity_1.Appointment)),
-    __metadata("design:paramtypes", [typeorm_2.Repository,
-        typeorm_2.Repository])
+    __param(0, (0, typeorm_1.InjectRepository)(appointment_entity_1.Appointment)),
+    __metadata("design:paramtypes", [typeorm_2.Repository])
 ], TimeSlotsService);
 //# sourceMappingURL=time-slots.service.js.map

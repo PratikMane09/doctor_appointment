@@ -40,7 +40,6 @@ __decorate([
     __metadata("design:type", String)
 ], TimeSlot.prototype, "doctorId", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => doctor_entity_1.Doctor, (doctor) => doctor.timeSlots),
     (0, typeorm_1.JoinColumn)({ name: "doctorId" }),
     __metadata("design:type", doctor_entity_1.Doctor)
 ], TimeSlot.prototype, "doctor", void 0);

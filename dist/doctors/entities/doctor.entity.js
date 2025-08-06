@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Doctor = void 0;
 const typeorm_1 = require("typeorm");
 const appointment_entity_1 = require("../../appointments/entities/appointment.entity");
-const time_slot_entity_1 = require("../../time-slots/entities/time-slot.entity");
 let Doctor = class Doctor {
 };
 exports.Doctor = Doctor;
@@ -52,10 +51,6 @@ __decorate([
     (0, typeorm_1.OneToMany)(() => appointment_entity_1.Appointment, (appointment) => appointment.doctor),
     __metadata("design:type", Array)
 ], Doctor.prototype, "appointments", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => time_slot_entity_1.TimeSlot, (timeSlot) => timeSlot.doctor),
-    __metadata("design:type", Array)
-], Doctor.prototype, "timeSlots", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" }),
     __metadata("design:type", Date)

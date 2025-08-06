@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
-import { TimeSlot } from "./entities/time-slot.entity";
+
 import {
   Appointment,
   AppointmentStatus,
@@ -10,8 +10,6 @@ import {
 @Injectable()
 export class TimeSlotsService {
   constructor(
-    @InjectRepository(TimeSlot)
-    private timeSlotsRepository: Repository<TimeSlot>,
     @InjectRepository(Appointment)
     private appointmentsRepository: Repository<Appointment>
   ) {}

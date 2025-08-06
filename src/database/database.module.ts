@@ -3,7 +3,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { Doctor } from "../doctors/entities/doctor.entity";
 import { Appointment } from "../appointments/entities/appointment.entity";
-import { TimeSlot } from "../time-slots/entities/time-slot.entity";
+
 import { SeedService } from "./seeds/seed.service";
 
 @Module({
@@ -17,13 +17,13 @@ import { SeedService } from "./seeds/seed.service";
         username: configService.get("DB_USERNAME", "postgres"),
         password: configService.get("DB_PASSWORD", "Pass@123"),
         database: configService.get("DB_NAME", "doctor_appointment"),
-        entities: [Doctor, Appointment, TimeSlot],
+        entities: [Doctor, Appointment],
         synchronize: configService.get("NODE_ENV") !== "production",
         logging: configService.get("NODE_ENV") === "development",
       }),
       inject: [ConfigService],
     }),
-    TypeOrmModule.forFeature([Doctor, Appointment, TimeSlot]),
+    TypeOrmModule.forFeature([Doctor, Appointment]),
   ],
   providers: [SeedService],
   exports: [SeedService],

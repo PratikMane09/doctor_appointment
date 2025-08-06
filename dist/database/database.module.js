@@ -12,7 +12,6 @@ const typeorm_1 = require("@nestjs/typeorm");
 const config_1 = require("@nestjs/config");
 const doctor_entity_1 = require("../doctors/entities/doctor.entity");
 const appointment_entity_1 = require("../appointments/entities/appointment.entity");
-const time_slot_entity_1 = require("../time-slots/entities/time-slot.entity");
 const seed_service_1 = require("./seeds/seed.service");
 let DatabaseModule = class DatabaseModule {
 };
@@ -27,15 +26,15 @@ exports.DatabaseModule = DatabaseModule = __decorate([
                     host: configService.get("DB_HOST", "localhost"),
                     port: configService.get("DB_PORT", 5432),
                     username: configService.get("DB_USERNAME", "postgres"),
-                    password: configService.get("DB_PASSWORD", "password"),
+                    password: configService.get("DB_PASSWORD", "Pass@123"),
                     database: configService.get("DB_NAME", "doctor_appointment"),
-                    entities: [doctor_entity_1.Doctor, appointment_entity_1.Appointment, time_slot_entity_1.TimeSlot],
+                    entities: [doctor_entity_1.Doctor, appointment_entity_1.Appointment],
                     synchronize: configService.get("NODE_ENV") !== "production",
                     logging: configService.get("NODE_ENV") === "development",
                 }),
                 inject: [config_1.ConfigService],
             }),
-            typeorm_1.TypeOrmModule.forFeature([doctor_entity_1.Doctor, appointment_entity_1.Appointment, time_slot_entity_1.TimeSlot]),
+            typeorm_1.TypeOrmModule.forFeature([doctor_entity_1.Doctor, appointment_entity_1.Appointment]),
         ],
         providers: [seed_service_1.SeedService],
         exports: [seed_service_1.SeedService],

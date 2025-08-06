@@ -34,7 +34,7 @@ let SeedService = SeedService_1 = class SeedService {
                 firstName: "John",
                 lastName: "Smith",
                 specialization: "Cardiology",
-                phone: "+1234567890",
+                phone: "+911234567890",
                 email: "john.smith@hospital.com",
                 workingHours: {
                     start: "09:00",
@@ -46,7 +46,7 @@ let SeedService = SeedService_1 = class SeedService {
                 firstName: "Sarah",
                 lastName: "Johnson",
                 specialization: "Dermatology",
-                phone: "+1234567891",
+                phone: "+911234567891",
                 email: "sarah.johnson@hospital.com",
                 workingHours: {
                     start: "08:00",
@@ -58,7 +58,7 @@ let SeedService = SeedService_1 = class SeedService {
                 firstName: "Michael",
                 lastName: "Brown",
                 specialization: "Orthopedics",
-                phone: "+1234567892",
+                phone: "+911234567892",
                 email: "michael.brown@hospital.com",
                 workingHours: {
                     start: "10:00",
@@ -70,7 +70,7 @@ let SeedService = SeedService_1 = class SeedService {
                 firstName: "Emily",
                 lastName: "Davis",
                 specialization: "Pediatrics",
-                phone: "+1234567893",
+                phone: "+911234567893",
                 email: "emily.davis@hospital.com",
                 workingHours: {
                     start: "09:00",
@@ -82,7 +82,7 @@ let SeedService = SeedService_1 = class SeedService {
                 firstName: "David",
                 lastName: "Wilson",
                 specialization: "Neurology",
-                phone: "+1234567894",
+                phone: "+911234567894",
                 email: "david.wilson@hospital.com",
                 workingHours: {
                     start: "08:30",
